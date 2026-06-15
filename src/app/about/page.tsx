@@ -1,6 +1,6 @@
 import Section from '@/components/sections/Section';
 import Container from '@/components/shared/Container';
-import { teamMembers } from '@/data';
+import { teamMembers } from '@/data/teamMembers';
 
 export default function AboutPage() {
   return (
@@ -58,10 +58,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member) => (
+            {teamMembers && teamMembers.map((member) => (
               <div key={member.id} className="gold-card rounded-xl p-6 text-center">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#C9A84C]/20 to-transparent flex items-center justify-center">
-                  <span className="text-3xl">👤</span>
+                  <span className="text-3xl">
+                    {member.name.includes('Solomon') && '👨‍💼'}
+                    {member.name.includes('Rahel') && '👩‍🎨'}
+                    {member.name.includes('Michael') && '👨‍💻'}
+                    {member.name.includes('Selamawit') && '👩‍🔧'}
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
                 <p className="text-[#C9A84C] text-sm mb-3">{member.role}</p>

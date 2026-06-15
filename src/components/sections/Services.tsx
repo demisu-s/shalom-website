@@ -6,7 +6,6 @@ import Container from '../shared/Container';
 import SectionHeader from '../shared/SectionHeader';
 import ServiceCard from '../shared/ServiceCard';
 import { SERVICE_CATEGORIES } from '@/constants';
-import type { ServiceCategory } from '@/types';
 import {services} from '@/data/services';
 
 export default function Services() {
