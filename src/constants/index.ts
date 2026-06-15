@@ -34,6 +34,7 @@ export const SERVICE_CATEGORIES = [
   { id: 'advertising', label: 'Advertising' },
 ];
 
+
 export const PROJECT_CATEGORIES = [
   { id: 'all', label: 'All Projects' },
   { id: 'events', label: 'Events' },
