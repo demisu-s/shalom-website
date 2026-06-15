@@ -1,26 +1,165 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #C9A84C;
+  --gold-light: #F0C040;
+  --gold-dark: #A07830;
+  --black: #0A0A0A;
+  --black-soft: #111111;
+  --black-card: #1A1A1A;
+  --black-border: #2A2A2A;
+  --white: #FFFFFF;
+  --white-muted: #E5E5E5;
+  --white-dim: #999999;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-black: var(--black);
+  --color-black-soft: var(--black-soft);
+  --color-black-card: var(--black-card);
+  --color-black-border: var(--black-border);
+  --color-white-muted: var(--white-muted);
+  --color-white-dim: var(--white-dim);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gold gradient text utility */
+.gold-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #F0C040 50%, #A07830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold gradient background */
+.gold-gradient {
+  background: linear-gradient(135deg, #C9A84C 0%, #F0C040 50%, #A07830 100%);
+}
+
+/* Card with gold border on hover */
+.gold-card {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  transition: all 0.3s ease;
+}
+
+.gold-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* Gold divider */
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #C9A84C, #F0C040);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+/* Animated underline for nav links */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A84C, #F0C040);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Button styles */
+.btn-gold {
+  background: linear-gradient(135deg, #C9A84C 0%, #F0C040 50%, #A07830 100%);
+  color: #0A0A0A;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 8px 25px rgba(201, 168, 76, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--gold);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #C9A84C 25%, #F0C040 50%, #C9A84C 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animate {
+  animation: float 3s ease-in-out infinite;
 }
