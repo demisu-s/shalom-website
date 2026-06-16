@@ -29,10 +29,11 @@ export interface Project {
   client: string;
   description: string;
   image: string;
+  videoUrl?: string; // Optional video URL
+  thumbnail?: string; // Optional thumbnail for video
   tags: string[];
   year: string;
 }
-
 export type ProjectCategory = 'events' | 'printing' | 'advertising' | 'branding';
 
 export interface Testimonial {
