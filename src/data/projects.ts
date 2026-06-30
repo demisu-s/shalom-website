@@ -1,10 +1,6 @@
 import type { Project } from '@/types';
 
-
-
-
 export const projects: Project[] = [
-
   {
     id: '1',
     title: 'Grand Wedding Gala',
@@ -12,18 +8,8 @@ export const projects: Project[] = [
     client: 'Dawit & Sara Haile',
     description: 'A stunning 300-guest wedding at Skylight Hotel featuring luxury décor, live band, and full catering coordination.',
     image: '/images/project-wedding.jpg',
-    videoUrl: '/videos/wedding-preview.mp4', // Add video URL
-    thumbnail: '/images/project-wedding-thumb.jpg', // Optional thumbnail
-    tags: ['Wedding', 'Luxury', 'Full Production'],
-    year: '2024',
-  },
-  {
-    id: '1',
-    title: 'Grand Wedding Gala',
-    category: 'events',
-    client: 'Dawit & Sara Haile',
-    description: 'A stunning 300-guest wedding at Skylight Hotel featuring luxury décor, live band, and full catering coordination.',
-    image: '/images/project-wedding.jpg',
+    videoUrl: '/videos/wedding-preview.mp4',
+    thumbnail: '/images/project-wedding-thumb.jpg',
     tags: ['Wedding', 'Luxury', 'Full Production'],
     year: '2024',
   },
@@ -93,7 +79,7 @@ export const projects: Project[] = [
     category: 'printing',
     client: 'Kategna Restaurant',
     description: 'Full restaurant branding including menus, signage, staff uniforms, and promotional banners.',
-    image: '/images/project-restaurant.jpg',
+    image: '/images/birtat.jpg',
     tags: ['Restaurant', 'Branding', 'Print'],
     year: '2023',
   },

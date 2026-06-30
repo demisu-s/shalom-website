@@ -1,42 +1,40 @@
-# Shalom Advertising & Event Organizer
+# Image and Video Requirements
 
-![Next.js](https://img.shields.io/badge/Next.js-16.2-black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6)
+## Image Specifications
 
-## 🌟 Overview
+### Portfolio Images
+- **Project Images**: 800x600px, JPG format, ~150KB
+- **Thumbnails**: 400x300px, JPG format, ~50KB
+- **Team Photos**: 400x400px, JPG format, ~80KB
+- **Logo**: 600x600px, PNG with transparency, ~100KB
 
-A premium website for Shalom Advertising & Event Organizer, Ethiopia's premier event management and advertising company. The website showcases services, portfolio, testimonials, and provides a contact platform for potential clients.
+### Video Specifications
+- **Format**: MP4 (H.264 codec)
+- **Resolution**: 1280x720px (720p) minimum
+- **Aspect Ratio**: 16:9
+- **File Size**: Keep under 20MB for optimal performance
+- **Preview Thumbnail**: 640x360px, JPG format
 
-## 🚀 Features
+## Required Files
 
-- **Responsive Design** - Fully responsive across all devices
-- **Modern UI** - Luxury gold-themed design with smooth animations
-- **Service Showcase** - Filterable services grid with categories
-- **Portfolio Gallery** - Project display with client testimonials
-- **Contact Form** - Integrated contact form for inquiries
-- **SEO Optimized** - Meta tags and Open Graph support
-- **TypeScript** - Type-safe codebase
+### Images
+- [ ] project-wedding.jpg
+- [ ] project-wedding-thumb.jpg
+- [ ] project-conference.jpg
+- [ ] project-branding.jpg
+- [ ] project-tshirts.jpg
+- [ ] project-launch.jpg
+- [ ] project-billboard.jpg
+- [ ] project-graduation.jpg
+- [ ] birtat.jpg
+- [ ] logo.png
+- [ ] video-placeholder.jpg
 
-## 🛠️ Tech Stack
+### Team Photos
+- [ ] team/solomon.jpg
+- [ ] team/rahel.jpg
+- [ ] team/michael.jpg
+- [ ] team/selamawit.jpg
 
-- **Framework:** Next.js 16 (App Router)
-- **Styling:** Tailwind CSS
-- **Language:** TypeScript
-- **Icons:** Lucide React
-- **Animations:** Framer Motion / CSS Transitions
-
-## 📦 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/shalom-website.git
-
-# Navigate to project
-cd shalom-website
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
+### Videos
+- [ ] videos/wedding-preview.mp4

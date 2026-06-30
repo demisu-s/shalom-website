@@ -1,40 +1,30 @@
-export interface NavLink {
-  label: string;
-  href: string;
-}
-
 export interface Service {
   id: string;
   title: string;
   description: string;
-  category: ServiceCategory;
+  category: string;
   icon: string;
   features: string[];
-  packages?: Package[];
-}
-
-export type ServiceCategory = 'event-management' | 'printing' | 'advertising';
-
-export interface Package {
-  name: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
+  packages?: {
+    name: string;
+    price: string;
+    features: string[];
+    popular?: boolean;
+  }[];
 }
 
 export interface Project {
   id: string;
   title: string;
-  category: ProjectCategory;
+  category: string;
   client: string;
   description: string;
   image: string;
-  videoUrl?: string; // Optional video URL
-  thumbnail?: string; // Optional thumbnail for video
+  videoUrl?: string;
+  thumbnail?: string;
   tags: string[];
   year: string;
 }
-export type ProjectCategory = 'events' | 'printing' | 'advertising' | 'branding';
 
 export interface Testimonial {
   id: string;
@@ -50,10 +40,10 @@ export interface TeamMember {
   name: string;
   role: string;
   bio: string;
+  image?: string;
 }
 
-export interface Stat {
-  value: string;
+export interface NavLink {
   label: string;
-  suffix: string;
+  href: string;
 }

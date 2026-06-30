@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prebuild": "npm run optimize-images",
+    "optimize-images": "npx ts-node scripts/optimize-images.ts",
+    "optimize:watch": "npx ts-node scripts/watch-images.ts",
+    "optimize:cli": "npx ts-node scripts/image-optimizer-cli.ts",
+    "optimize:advanced": "npx ts-node scripts/optimize-advanced.ts",
+    "optimize:build": "tsc -p tsconfig.scripts.json && node dist/scripts/optimize-images.js"
+  }
+}
