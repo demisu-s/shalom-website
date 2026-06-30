@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -23,7 +24,20 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 
-export default function PortfolioPage() {
+// Loading fallback component
+function PortfolioLoading() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-[#C9A84C] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-[#999999]">Loading portfolio...</p>
+      </div>
+    </div>
+  );
+}
+
+// Main portfolio content component that uses useSearchParams
+function PortfolioContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
   
@@ -669,5 +683,14 @@ export default function PortfolioPage() {
         </div>
       )}
     </>
+  );
+}
+
+// Main export with Suspense boundary
+export default function PortfolioPage() {
+  return (
+    <Suspense fallback={<PortfolioLoading />}>
+      <PortfolioContent />
+    </Suspense>
   );
 }
