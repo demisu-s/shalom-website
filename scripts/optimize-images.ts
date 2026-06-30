@@ -1,4 +1,4 @@
-import sharp from 'sharp';
+import sharp, { FitEnum } from "sharp";
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -10,7 +10,7 @@ interface ImageConfig {
   width: number;
   height: number;
   quality: number;
-  fit?: keyof sharp.FitEnum;
+fit?: keyof import("sharp").FitEnum;
   position?: string;
 }
 
@@ -112,7 +112,7 @@ async function optimizeImage(
     
     const format = metadata.format || 'jpeg';
     
-    if (format === 'jpeg' || format === 'jpg') {
+    if (format === 'jpeg') {
       pipeline = pipeline.jpeg({
         quality: size.quality || CONFIG.jpegQuality,
         progressive: true,

@@ -47,3 +47,10 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+
+export interface Stat {
+  value: string;
+  label: string;
+  suffix?: string;
+}
